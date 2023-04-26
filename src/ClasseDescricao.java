@@ -1,3 +1,5 @@
+import java.util.Locale;
+import java.util.Scanner;
 
 public class ClasseDescricao {
 	
@@ -59,6 +61,45 @@ public class ClasseDescricao {
 	        System.out.println("Ola, me chamo " + nome + " " + sobrenome);
 	        System.out.println("Tenho " + idade + " anos ");
 	        System.out.println("Minha altura é " + altura + "cm ");
-	    }
+	        
+	        
+	        
+	        
+	        
+	        //Scanner
+	        /**
+	         * 
+	         * Nos exemplos anteriores, percebemos que podemos receber, 
+	         * dados digitados pelo usuário do nosso sistema, porém, tudo precisa 
+	         * estar em uma linha e também é necessário informar os valores nas 
+	         * posições correspondentes. Esta abordagem pode deixar margens de 
+	         * execução, com erro do nosso programa. Para isso, com a finalidade 
+	         * de deixar as nossas entradas de dados mais seguras, 
+	         * agora vamos receber estes dados via Scanner
+	         * 
+	         */
+	   
+	        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+	        
+	        System.out.println("Digite seu nome");
+	        String nome1 = scanner.next();
+	        
+	        System.out.println("Digite seu sobrenome");
+	        String sobrenome1 = scanner.next();
+
+	        System.out.println("Digite sua idade");
+	        int idade1 = scanner.nextInt();
+	        
+	        System.out.println("Digite sua altura");
+	        double altura1 = scanner.nextDouble();
+
+	        
+	        //imprimindo os dados obtidos pelo usuario
+	        System.out.println("Ola, me chamo " + nome1 + " " + sobrenome1);
+	        System.out.println("Tenho " + idade1 + " anos ");
+	        System.out.println("Minha altura é " + altura1 + "cm ");
+	        
+	   
+	   }
 }
 
